@@ -15,12 +15,12 @@ public class Enterprise implements Printable {
 	
 	
 	// Variables
-	private SortedMap<Integer, Worker> listWorkers = new TreeMap<>();
+	private SortedMap<Integer, Printable> listWorkers = new TreeMap<>();
 	public final String enterpriseName;
 	
 	
 	// Methods
-	public void addWorker(Worker somebody)
+	public void addWorker(Printable somebody)
 	{
 		if (listWorkers.isEmpty())
 		{
@@ -32,12 +32,12 @@ public class Enterprise implements Printable {
 		listWorkers.put(++lastID, somebody);
 	}
 	
-	public Worker getWorkerByID(Integer number)
+	public Printable getWorkerByID(Integer number)
 	{
 		return listWorkers.get(number);
 	}
 	
-	public Worker removeWorkerByID(Integer number)
+	public Printable removeWorkerByID(Integer number)
 	{
 		return listWorkers.remove(number);
 	}
@@ -60,14 +60,14 @@ public class Enterprise implements Printable {
 		System.out.println("------------");
 		System.out.println("");
 		
-		SortedMap<Integer, Worker> workerList = business.getListWorkers();
+		SortedMap<Integer, Printable> workerList = business.getListWorkers();
 		
 		Integer index = 0;
 		
 		for(var entry : workerList.entrySet())
 		{
 			Integer ID = entry.getKey();
-			Worker somebody = entry.getValue();
+			Printable somebody = entry.getValue();
 			
 			System.out.println("Worker n°:" + ID);
 			somebody.printSelf();
@@ -87,14 +87,14 @@ public class Enterprise implements Printable {
 		System.out.println("------------");
 		System.out.println("");
 		
-		SortedMap<Integer, Worker> workerList = business.getListWorkers();
+		SortedMap<Integer, Printable> workerList = business.getListWorkers();
 		
 		Integer index = 0;
 		
 		for(var entry : workerList.entrySet())
 		{
 			Integer ID = entry.getKey();
-			Worker somebody = entry.getValue();
+			Printable somebody = entry.getValue();
 			
 			System.out.println("Worker n°:" + ID);
 			somebody.printSelf();
@@ -110,7 +110,7 @@ public class Enterprise implements Printable {
 	
 	
 	// Getters & Setters
-	public SortedMap<Integer, Worker> getListWorkers()
+	public SortedMap<Integer, Printable> getListWorkers()
 	{
 		return listWorkers;
 	}
