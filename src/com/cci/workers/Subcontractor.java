@@ -14,9 +14,9 @@ public class Subcontractor extends Worker {
 	
 	
 	// Methods
-	public void printWorker()
+	public void printSelf()
 	{
-		super.printWorker();
+		super.printSelf();
 		System.out.println("$" + dailyRate + "/day");
 	}
 	

@@ -1,7 +1,7 @@
 package com.cci.workers;
 
 // The class that will be inherited by all kinds of workers
-public abstract class Worker {
+public abstract class Worker implements Printable {
 	// Contructor
 	public Worker(String firstName, String lastName)
 	{
@@ -21,7 +21,7 @@ public abstract class Worker {
 	
 	
 	// Methods
-	public void printWorker()
+	public void printSelf()
 	{
 		System.out.println(firstName + " " + lastName);
 	}

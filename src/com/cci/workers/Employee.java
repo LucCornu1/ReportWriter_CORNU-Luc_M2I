@@ -22,9 +22,9 @@ public class Employee extends Worker {
 	
 	
 	// Methods
-	public void printWorker()
+	public void printSelf()
 	{
-		super.printWorker();
+		super.printSelf();
 		System.out.println("$" + salary + "/month, " + vacationLeft + " days");
 	}
 

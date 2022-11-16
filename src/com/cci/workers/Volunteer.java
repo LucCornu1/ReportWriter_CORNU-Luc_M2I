@@ -11,7 +11,7 @@ public class Volunteer extends Worker {
 	// Methods
 	public void printWorker()
 	{
-		super.printWorker();
+		super.printSelf();
 		System.out.println("Life is beautiful");
 	}
 
